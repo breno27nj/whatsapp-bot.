@@ -8,7 +8,7 @@ def gerar_resposta(mensagem_usuario: str) -> str:
 
     if texto in ("oi", "olá", "ola", "bom dia", "boa tarde", "boa noite"):
         return (
-            "Olá! Sou um bot de atendimento automatico oi .\n"
+            "Olá! Sou um bot de atendimento automatico, Irei iniciar o seu atendimento. .\n"
             "Digite:\n"
             "1 - Falar sobre produtos\n"
             "2 - Falar com um atendente\n"
