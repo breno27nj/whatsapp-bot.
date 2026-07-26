@@ -23,13 +23,11 @@ def gerar_resposta(mensagem_usuario: str) -> str:
 
     if texto == "3":
         return "Funcionamos de segunda a sexta, das 9h às 18h."
-
    
     return (
         "Desculpe, não entendi .\n"
         "Digite *oi* para ver as opções disponíveis."
     )
-
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
@@ -39,19 +37,14 @@ def webhook():
     print(f"Mensagem recebida de {numero_remetente}: {mensagem_recebida}")
 
     resposta_texto = gerar_resposta(mensagem_recebida)
-
-
     resposta = MessagingResponse()
     resposta.message(resposta_texto)
 
     return str(resposta)
 
-
 @app.route("/", methods=["GET"])
 def home():
     return "Bot rodando! Configure o webhook do Twilio para /webhook"
 
-
 if __name__ == "__main__":
-
     app.run(port=5000, debug=True)
