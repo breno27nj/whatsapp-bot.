@@ -43,7 +43,7 @@ def gerar_resposta(mensagem_usuario: str) -> str:
 
     # resposta padrão quando não entende a mensagem
     return (
-        "Desculpe, não entendi 🤔.\n"
+        "Desculpe, não entendi .\n"
         "Digite *oi* para ver as opções disponíveis."
     )
 
