@@ -31,7 +31,8 @@ def gerar_resposta(mensagem_usuario: str) -> str:
 
 @app.route("/webhook", methods=["POST"])
 def webhook():
-   mensagem_recebida = request.values.get("Body", "")
+ 
+    mensagem_recebida = request.values.get("Body", "")        
     numero_remetente = request.values.get("From", "")
 
     print(f"Mensagem recebida de {numero_remetente}: {mensagem_recebida}")
